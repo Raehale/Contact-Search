@@ -1,22 +1,40 @@
 <!doctype html>
+
 <html>
 
 <head>
-	<title>Contacts Search</title>
+	<title>Women in Computer Science Search</title>
+
+	<!-- stylesheet link -->
 	<link rel="stylesheet" href="index.css">
+
+	<!-- google rubik font -->
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet" />
+
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 </head>
 
 <body>
+	<header>
+		<h1>Women in Computer Science History</h1>
+		<p>Search to find information on a woman in computer science history, or click "random" for a random woman.</p>
+	</header>
 	<main>
-		<label for="pattern-search-input">
-            Enter contact name:
-        </label>
-		<div class="input-area">
-			<input type="text" id="pattern-search-input">
-			<button id="pattern-search-submit">Search</button>
+		<div class="search-bar">
+			<label for="pattern-search-input">
+				Enter name:
+			</label>
+			<div class="input-area" for="pattern-search-input">
+				<datalist id="suggestions"></datalist>
+				<input type="text" id="pattern-search-input" autoComplete="on" list="suggestions">
+				<button class="btn search-btn" id="pattern-search-submit">Search</button>
+			</div>
 		</div>
         <hr>
-		<section id="contact-display" class="contact-display"></section>
+		<button class="btn random-btn" id="random-btn">Random</button>
+		<section id="women-display" class="women-display"></section>
+		<modal id="woman-modal" class="woman-modal"></modal>
 	</main>
 	<script src="index.js" type="module"></script>
 </body>
